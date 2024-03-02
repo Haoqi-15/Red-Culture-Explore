@@ -1,0 +1,423 @@
+.background {
+    background-image: url(photohefei/red.jpg);
+    background-size: cover; /* 使锟斤拷锟斤拷图片锟斤拷锟斤拷锟斤拷锟斤拷元锟斤�?? */
+    background-repeat: no-repeat; /* 锟斤拷�?�锟斤拷锟斤拷图片锟�?革拷 */
+    background-attachment: fixed; /* 使锟斤拷锟斤拷图片锟节癸拷锟斤拷时�?�锟斤拷锟斤拷�? */
+}
+
+
+#messageButton {
+    position: absolute;
+    top: -9px;
+    right: -1310px;
+}
+
+#commit{
+     position: fixed;
+     top: 10px;
+     right: 80px;
+    }
+    #input{
+     position: fixed;
+     top: 10px;
+     right: 135px;
+    }
+
+.back {
+    position: absolute;
+    top: -20px;
+    left: -96px; /* 锟斤拷锟斤拷锟斤拷锟狡�?�拷锟斤拷锟斤拷锟较斤�? */
+    font-size: 20px; /* 锟斤拷锟斤拷锟斤拷锟斤拷锟叫�?? */
+    font-family: Arial, sans-serif; /* 锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷 */
+    text-decoration: none; /* 锟狡筹拷锟斤拷锟接�?�拷锟铰伙拷锟斤�? */
+}
+
+.box{
+    width:1000px;
+    height:340px;
+    margin:220px auto 50px;
+    /* margin-top: ; */
+    margin-bottom: 50px;
+    /* border:2px solid #FFF; */
+    overflow:hidden;
+    /* background-color:rgba(255,255,255,0.3); */
+    /* box-shadow:5px 5px 7px rgba(255,255,255,0.5); */
+}
+.box li{
+    float:left;
+    position:relative;
+    width:200px;
+    height:370px;
+    box-shadow:0 0 25px #000000;
+    transition:all 0.5s;
+}
+.box li .text{
+    position:absolute;
+    left:0;
+    bottom:0;
+    font-size:16px;
+    color:#FFF;
+    width:100%;
+    height:60px;
+    text-align:center;
+    line-height:30px;
+    background:#000;
+    background-color:rgba(0,0,0,0.7);
+}
+.box li img {
+    width: 100%; /* 锟斤拷锟斤拷图锟斤拷�?锟斤拷锟�? */
+    height: 100%; /* 锟斤拷锟斤拷图锟斤拷母叨锟� */
+    object-fit: cover; /* 锟斤拷锟斤拷图锟斤拷锟斤拷锟斤拷锟接︼拷锟斤拷锟斤拷锟� */
+    margin-right: 10px; /* 锟斤拷锟斤拷图锟斤拷锟揭诧拷锟斤拷锟�?撅�? */
+}
+/* .box:hover li{
+    width:125px;
+}
+.box li:hover{
+    width:500px;
+} */
+
+animation{
+    from{
+        width:1px;
+        height:1px;
+        transform:scale(0);
+        opacity:1;
+    }
+    to{
+        width:1px;
+        height:1px;
+        transform:scale(100);
+        opacity:0;
+    }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 20px 100px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+    border-bottom: none; /* 锟狡筹拷锟�??匡拷 */
+    /*border-radius:30px;*/
+    background-color: transparent; /* 锟狡筹拷锟斤拷锟斤拷 */
+    /* background-image: url(photohefei/aa.png); */
+}
+
+.headerimg img{
+    width: 100%;
+    height: 100%;
+}
+/* ............................................. */
+
+/* .photo a :link {
+    color: blue;
+    text-decoration: none;
+}
+.photo a:visited {
+    color: blue;
+    text-decoration: none;
+}
+.photo a:hover {
+    color: hotpink;
+    text-decoration: none;
+}
+.photo a:active {
+    color: red;
+    text-decoration: none;
+} */
+.photo{
+    width: 100%;
+    display: flex;  /* 灏哾iv鍏冪礌鐨�?竷灞�?�?″紡璁句负Flex */
+    justify-content: space-around;  /*瀛愬厓绱犵瓑闂�?�窛鍒嗗竷锛屾按骞冲眳涓�?
+    align-items: center;  /* 瀛愬厓绱犲�?鐩村眳涓榻�? */
+    margin-top: 70px;
+}
+.photo img {
+    width: 272px;   /* 鍥剧墖瀹藉害涓�??240px */
+    height: 290px;  /* 鍥剧墖�?�樺害涓�?240px */
+    transition: all 0.3s;  /* 浣垮浘鐗囦腑鎵€鏈�?�睘�?у�??0.6绉掑唴瀹屾垚鏀瑰彉 */
+    cursor: pointer;  /* 褰撻紶鏍囩Щ鍒板浘鐗囦笂鏃讹紝榧犳爣鏍峰紡鍙樹负鎵�?�?? */
+     flex-shrink: 0;/* 闃叉鍥剧�?�鍦ㄧ缉灏忔椂琚尋鍙樺�? */
+}
+
+.photo1:hover img{
+    transform: scale3d(1.05,1.05,1)
+}
+.photo1{
+    position: relative;
+}
+.next {
+    text-align: center;
+}
+.next button {
+    margin-top: 30px;
+    border-radius: 8px;
+    background-color: white;
+}
+.next button:hover {
+     background-color: red;
+}
+.overlay {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 50%͸���ĺ�ɫ���� */
+    display: none; /* ��ʼʱ�����ɰ� */
+}
+.overlay p{
+    font-size: 13px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-align: justify;
+    line-height: 18px;
+    margin: 30px 12px 5px;
+}
+.photo1:hover .overlay{
+    color: #ff9571;
+    display: block;
+    transform: scale3d(1.05,1.05,1)
+}
+
+/* ................................................. */
+.nav-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.navbar-brand {
+    font-family:"锟斤拷锟斤拷";
+    font-size: 30px;
+    font-weight: bold;
+    height:30px;
+    color:#FFF;
+}
+
+.navbar-brandE {
+    font-family:"Times New Roman";
+    font-size: 20px;
+    font-weight:700;
+    /*color:#FFF;*/
+    text-align: center;
+}
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;    /* font-family: 锟斤拷锟斤拷, 锟斤拷锟斤拷锟斤�??, sans-serif; */
+}
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    font-weight: 400;
+    margin-left: 15px;
+    transition: all .5s linear;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+header ul li:hover {
+    background: #497271;
+    color: #2b1055;
+}
+
+header ul li.active {
+
+    color: #2b1055;
+}
+header ul li a {
+    text-decoration: none; /* 去锟斤拷锟斤拷锟接�?�拷锟铰伙拷锟斤拷效锟斤�? */
+    user-select: none; /* 取锟斤拷默锟斤拷选锟斤拷效锟斤拷 */
+}
+a:link,a:visited{
+    color:#FFF;
+    text-decoration:none;
+}
+.container{
+    width:100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: 0.5s;
+    height:1300px;
+    /*height:1100px;*/
+}
+.container .card{
+    position: relative;
+    width: 470px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    margin:60px 35px 60px 35px;
+}
+p.line_c {
+    background-color: white;
+    height: 3px;
+    margin: 0 25px;
+    position: relative;
+    top: -5%;
+    width: 90%;
+}
+.container:hover .card{
+    filter: blur(5px);
+    transform: scale(.7);
+}
+
+.container .card:hover{
+    filter: blur(0px);
+    transform: scale(1);
+}
+.container .card:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:#497271;
+    z-index: 1;
+    transition: 0.5s;
+}
+.container .card:hover:before{
+    background:#FFF;
+    transform: scale(1.15);
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+}
+.container .card .content{
+    text-align: center;
+    z-index: 2;
+    padding: 0 20px;
+    transition: 0.5s;
+}
+.container .card:hover .content{
+    color:#497271;
+}
+.container .card .text_communist_c{
+    display: inline-block;
+    color: white;
+    font-size: 40px;
+    margin-top: -20px;
+    position: relative;
+    top: -5px;
+    z-index:99;
+}
+.text_communist{
+    font-size: 30px;
+    color: #ff9571;
+    font-weight: bold;
+}
+.container .card:hover .text_communist_c{
+    color:#000;
+}
+.container .card .text_content_c{
+    display: inline-block;
+    color:#FFF;
+    font-size: 5px;
+    line-height: 2;
+    z-index:99;
+}
+.container .card:hover .text_content_c{
+    color:#000;
+}
+.text_communist_c {
+    color: white;
+    font-size: 40px;
+    margin-top: -20px;
+    margin-left:5px;
+    position: relative;
+    top: -5px;
+    z-index:99;
+}
+.text_content_c {
+    color:#FFF;
+    font-size: 5px;
+    line-height: 2;
+    z-index:99;
+}
+.text_content {
+    /* 锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷为锟斤拷锟斤拷锟斤拷母锟侥匡拷锟斤拷 */
+    text-indent: 2em;
+    font-size: 20px;
+    /* color: white; */
+    
+    height: auto;
+    /* font-size: .5rem; */
+    color: #fbd89a;
+    letter-spacing: .025rem;
+    /* text-align: justify; */
+    line-height: 1.85rem;
+    /* text-shadow: 0 2px 4px rgba(0,0,0,.3); */
+    
+}
+.info-content p{
+    margin: 0px 10px -18px;
+}
+.block-content{
+    background-image:url("imge/img_5.png");
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.beautiful{
+    margin:30px;
+}
+.blockone-bottom{
+    background-color:#000;
+    height: 100px;
+    /*border:1px solid #FFF ;*/
+}
+.blockone-bottom>li{
+    width: 195px;
+    height: 96px;
+    float: left;
+    margin-left: 12px;
+    margin-bottom: 10px;
+    list-style:none;
+}
+.blockone-bottom>li a{
+    width: 96px;
+    height: 30px;
+    line-height: 30px;
+    background:  #497271;
+    color:#FFF;
+    border-radius: 0 0 6px 0;
+    box-shadow: 0 2px 2px #FFFFFF;
+}
+.blockone-bottom>li a:hover{
+    width: 96px;
+    height: 30px;
+    line-height: 30px;
+    background:  #497271;
+    color:#FFF;
+    border-radius: 0 0 6px 0;
+    box-shadow: 0 2px 2px #666;
+}
+.blockone-bottom>li>a:link,.blockone-bottom>li>a:visited{
+    text-decoration:none;
+}
+.img_title {
+    color: blue;
+}
+.containerx {
+    display: flex;
+    justify-content: space-between;
+}

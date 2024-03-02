@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<style>
+  html{
+    min-width:1100px;
+    /* background-color: #be000d; */
+     }
+    #go-to-top{
+            cursor: pointer;
+      }
+    ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .clearfix:after { /*浼厓绱犳槸琛屽唴鍏冪礌 姝ｅ父娴忚鍣ㄦ竻闄ゆ诞鍔ㄦ柟娉 */
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        #content {
+            width: 1100px;
+            margin: 0 auto;
+            /* display: flex; */
+            transform: translateX(-30px);
+        }
+
+        .Catalognamepicture {
+            width: 342px;
+            height: 82px;
+            background-image: url("../photohefei/人物/one.png");
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding-left: 104px;
+            line-height: 82px;
+            background-size: 100% 100%;
+            /* margin-left: 100px; */
+        }
+
+        .Catalognamepicture > h3 {
+            font-weight: 200;
+            color: white;
+            letter-spacing: 4px
+        }
+
+        .MartyrCity {
+            width: 100%;
+            margin-bottom: 60px;
+            box-shadow: 1px 1px 6px -3px;
+            margin-left: 30px;
+        }
+
+        .Left-information {
+            float: left;
+            width: 720px;
+            padding-top: 60px;
+            padding-right: 60px;
+
+        }
+
+        .Martyrinformation {
+            width: 100%;
+            float: left;
+        }
+
+        .Martyrinformation-title {
+            width: 100%;
+            display: flex;
+            justify-content: left;
+        }
+
+        /* .Martyrinformation-title > div:nth-child(1) {
+            width: 6px;
+            height: 24px;
+            background-color: #4f9cee;
+        } */
+
+        .Martyrinformation-title > div:nth-child(2) {
+            font-size: 18px;
+            font-weight: 700;
+            margin-left: 15px;
+            margin-right: 15px;
+            white-space: nowrap;
+        }
+
+        .Martyrinformation-title > div:nth-child(3) {
+            width: 100%;
+        }
+
+        .Martyrinformation-title > div:nth-child(3) > hr {
+            width: 100%;
+            line-height: 24px;
+        }
+
+        .Martyractivities {
+            padding-top: 60px;
+            float: left;
+            width: 270px;
+            height: 100%;
+        }
+
+        .details {
+            width: 100%;
+            padding-top: 40px;
+            padding-bottom: 50px;
+
+        }
+        .Martyrinformation:nth-child(2)>.details{
+            padding-bottom: 0px !important;
+        }
+        .details > div {
+            margin-left: 50px;
+        }
+
+        .details > div:nth-child(1) {
+            margin-bottom: 36px;
+        }
+
+        .information {
+            display: inline-block;
+            font-size: 14px;
+            min-width: 59.4px;
+            font-family: "microsoft yahei";
+            color: #444444;
+            vertical-align: top;
+        }
+
+        .describe {
+            display: inline-block;
+            width: 260px;
+            font-size: 14px;
+            font-family: "microsoft yahei";
+            color: #444444;
+            text-align: left;
+            font-weight: 700;
+            vertical-align: top;
+            word-break: break-all;
+
+        }
+
+        .Stories-martyrs {
+            padding-top: 8px !important;
+            font-weight: 700;
+        }
+
+        .Introduction-Longwen {
+            font-size: 14px;
+            font-family: "microsoft yahei";
+            color: #444444;
+            line-height: 2em
+        }
+
+        .Introduction-Longwen > p {
+            text-align: justify
+        }
+
+        .Photo-frame {
+        	position: relative;
+            width: 270px;
+            height: 335px;
+            margin-bottom: 40px;
+            text-align: center;
+            padding-top: 16px;
+            background-color: #dddddd;
+        }
+
+        .Photo {
+            width: 240px;
+            height: 310px;
+        }
+
+        .Sacrifice-button {
+            height: 400px;
+            width: 100%;
+        }
+
+        .Martyractivities > h3 {
+            text-align: center;
+            margin: 0;
+            padding-bottom: 50px;
+            font-size: 24px;
+            color: #444444;
+            letter-spacing: 6px;
+            font-weight: 600;
+        }
+
+        .Sacrifice-button > .Sacrifice-sweeping {
+            width: 108px;
+            height: 50px;
+            line-height: 50px;
+            /* background-image: url("../photohefei/人物/button.png"); */
+            background-size: 100% 100%;
+            margin-bottom: 30px;
+            margin-right: 0;
+            margin-left: 50px;
+            padding-left: 65px;
+            cursor: pointer
+        }
+
+        .Sacrifice-button > .Sacrifice-sweeping > span {
+            color: white;
+            font-size: 18px;
+        }
+
+        .Sacrifice-button > .Heroic-story {
+            cursor: pointer;
+            width: 173px;
+            height: 50px;
+            line-height: 50px;
+            color: white;
+            text-align: center;
+            border-radius: 4px;
+            margin-right: 0;
+            margin-left: 50px;
+            background-color: #8393c4;
+        }
+
+        /* .Sacrifice-button > .Heroic-story > span {
+
+        } */
+        .Photo-frame-name{
+        	letter-spacing:4px !important;
+        	width: 137px;
+		    font-weight: 900;
+		    text-indent: 2px;
+		    margin: 0 auto;
+		    position: absolute;
+		    top: 45px;
+		    left: 28px;
+		    font-size: 20px;
+		    /* width: 270px; */
+		    height: 30px;
+		    line-height: 30px;
+		    text-align: center;
+		    background: linear-gradient(to right,#f67633,#be000d);
+		    /* -webkit-background-clip: text; */
+		    color: transparent;
+}
+
+
+</style>
+</head>
+<body>
+ 
+  <div id="content">
+    <div class="Catalognamepicture">
+        <h3>英雄 马毛姐</h3>
+    </div>
+    <div class="MartyrCity clearfix">
+        <div class="Left-information">
+            <!--基本信息-->
+            <div class="Martyrinformation ">
+                <div class="Martyrinformation-title ">
+                    <div></div>
+                    <div>基本信息</div>
+                    <div>
+                        <hr/>
+                    </div>
+                </div>
+                <div class="essential-information details">
+                    <div>
+                        <span class="information">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别:</span>
+                        <span class="describe xb">女</span>
+                        <span class="information">出生日期:</span>
+                        <span class="describe csrq">1935年9月</span>
+                    </div>
+                    <div>
+                        <span class="information">籍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贯:</span>
+                        <span class="describe jg">汉族</span>
+                        <span class="information">政治面貌:</span>
+                        <span class="describe zzmm">中国共产党员</span>
+                    </div>
+                </div>
+            </div>
+            <!--生前情况-->
+            <div class="Martyrinformation">
+                <div class="Martyrinformation-title ">
+                    <div></div>
+                    <div>功劳情况</div>
+                    <div>
+                        <hr/>
+                    </div>
+                </div>
+                <div class="Living-conditions details">
+                    <div>
+                        
+                        <span class="information">主要成就:</span>
+                        <span class="describe sqzw">
+                        “一级渡江功臣”，“七一勋章”</span>
+                        <span class="information">立功情况:</span>
+                        <span class="describe sqzw">年仅14岁的马毛姐参加“渡江突击队”，在手臂中弹的情况下依然咬牙坚持，不畏枪林弹雨6次横渡长江，运送3批解放军成功登岸。
+                        </span>
+                        <span class="describe lgqk" style="width: 277px"></span>
+                    </div>
+                </div>
+            </div>
+            <!--牺牲情况-->
+            <div class="Martyrinformation">
+                <div class="Martyrinformation-title ">
+                    <div></div>
+                    <div>生活近状</div>
+                    <div>
+                        <hr/>
+                    </div>
+                </div>
+                <div class="Sacrifice details">
+                    <div>
+                        <span class="information">居住地点:</span>
+                        <span class="describe xsrq">合肥市蜀山区西园街道
+                        </span>
+                        <span class="information">任职情况:</span>
+                        <span class="describe xsyy">退休状态</span>
+                    </div>
+                    <div>
+                        <span class="information"></span>
+                        <span class="describe xxdd"></span>
+                        <span class="information"></span>
+                        <span class="describe azdd"></span>
+                    </div>
+                </div>
+            </div>
+            <!--烈士事迹-->
+            <div class="Martyrinformation">
+                <div class="Martyrinformation-title ">
+                    <div></div>
+                    <div>英雄事迹</div>
+                    <div>
+                        <hr/>
+                    </div>
+                </div>
+                <div class="Stories-martyrs details">
+                    <div class="Introduction-Longwen lssj">
+                        <p>1949年2月，解放军到了她的家乡，开始准备渡江战役。当时，全国解放形势一片大好，“打过长江去，解放全中国”的口号已经叫响，解放军正在这里进行渡江前的各项准备。
+
+                             
+                            老百姓得知解放军要渡江，纷纷参加支前活动，年仅14岁的马毛姐，听了解放军的动员后，热血沸腾，感觉老百姓的好日子就要来了，因此，她第一时间就报名参加了渡江突击队，开始参与支援解放军渡江的准备活动。
+                            
+                            渡江战役，关键是船只的准备，当得知解放军的船只没有征集够后，马毛姐就和哥哥一起，带着解放军到老乡家做动员。在解放军来之前，许多老百姓因为听信了国民党的鼓动，把船沉进了江底或是池塘里，马毛姐对这一带的船只非常清楚，就和哥哥把自己的船交给了解放军，然后带着解放军挨家挨户地做工作，并和解放军一起打捞船只，登记造册，对于有些家庭特别困难的，解放军还会把船买下来，把钱送给老乡。
+                            
+                             
+                            在马毛姐等人的努力下，部队很快就征集够了船只。1949年4月12日晚，渡江战役正式打响。
+                            
+                            马毛姐的哥哥被编入了船队，掌握着一条船准备运送解放军过江。战前，马毛姐也坚决要求参加战斗，但解放军对她说，你太小了，任务太危险，没有同意她的请求。但是，战役打响后，哥哥撑船离岸时，她趁着大家都在盯着前方，直接撑起竹篙就跃上了船。
+                            
+                             
+                            当时，战斗已经打响了，时间非常紧急，船已无法掉头，大家只能带着马毛姐一起冲向对岸。在战斗中，子弹嗖嗖地从身边穿过，但马毛姐毫不畏惧，奋力地撑着竹篙，和哥哥一起前进。
+                            
+                            突然，一颗子弹擦伤了她的手臂，顿时鲜血直流，一名战士要为她包扎，但她说：“叔叔，没关系。”然后继续撑船。敌军的炮火非常猛烈，船大幅度摇摆，许多解放军战士都掉进了水里，这时，马毛姐想都没想，立刻跳入江中，凭着自己过硬的水性，救上来了好几位解放军战士。
+                            
+                            就这样，马毛姐和哥哥一起，不畏枪林弹雨，6次横渡长江，运送了3批解放军成功登岸！渡江战役胜利结束后，马毛姐被授予“一等渡江功臣”荣誉称号，无为县共有3107名渡江功臣，她是年纪最小的一个。
+                            新中国成立后，马毛姐于1954年光荣入党，先后在安徽合肥麻纺厂、针织厂、被服厂、鞋帽厂等地工作过，担任过车间主任、工会主席、副经理等职。2021年6月29日，马毛姐被授予“七一勋章”。在面对记者采访时，马毛姐说要把这枚勋章送到渡江战役纪念馆，“给后面的人看看，更好地为党和人民服务。”
+
+                            今天的马毛姐，已经86岁高龄了，虽然患有多种疾病，但精神非常好，心态也非常积极乐观，正如她的女儿所说：“她一辈子豁达知足，无私无畏，只为别人着想，活得很幸福。”</p> <!-- 在这里添加文字 -->
+                    </div>
+                </div>
+            </div>
+      </div>
+       
+        <div class="Martyractivities">
+          <div class="Photo-frame lszp">
+              <img src="../photohefei/人物/马毛姐.jpg" class="Photo" />
+              <!-- <div class="Photo-frame-name" id="lsname"></div> -->
+          </div>
+          <h3 class="lsxm">
+            英雄 马毛姐
+          </h3>
+          <div class="Sacrifice-button">
+              <div class="Sacrifice-sweeping">
+                  <span>祭扫英雄</span>
+              </div>
+             <!-- <div class="Heroic-story">
+                  <span>查看英雄故事</span>
+              </div>-->
+          </div>
+      </div>
+    </div>
+  </div>
+ 
+</body>
+</html>

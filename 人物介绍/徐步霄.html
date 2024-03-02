@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>徐步霄</title>
+<style>
+  html{
+    min-width:1100px;
+    /* background-color: #be000d; */
+     }
+    #go-to-top{
+            cursor: pointer;
+      }
+    ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .clearfix:after { /*浼厓绱犳槸琛屽唴鍏冪礌 姝ｅ父娴忚鍣ㄦ竻闄ゆ诞鍔ㄦ柟娉 */
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        #content {
+            width: 1100px;
+            margin: 0 auto;
+            /* display: flex; */
+            transform: translateX(-30px);
+        }
+
+        .Catalognamepicture {
+            width: 342px;
+            height: 82px;
+            background-image: url("../photohefei/人物/one.png");
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding-left: 104px;
+            line-height: 82px;
+            background-size: 100% 100%;
+            /* margin-left: 100px; */
+        }
+
+        .Catalognamepicture > h3 {
+            font-weight: 200;
+            color: white;
+            letter-spacing: 4px
+        }
+
+        .MartyrCity {
+            width: 100%;
+            margin-bottom: 60px;
+            box-shadow: 1px 1px 6px -3px;
+            margin-left: 30px;
+        }
+
+        .Left-information {
+            float: left;
+            width: 720px;
+            padding-top: 60px;
+            padding-right: 60px;
+
+        }
+
+        .Martyrinformation {
+            width: 100%;
+            float: left;
+        }
+
+        .Martyrinformation-title {
+            width: 100%;
+            display: flex;
+            justify-content: left;
+        }
+
+        /* .Martyrinformation-title > div:nth-child(1) {
+            width: 6px;
+            height: 24px;
+            background-color: #4f9cee;
+        } */
+
+        .Martyrinformation-title > div:nth-child(2) {
+            font-size: 18px;
+            font-weight: 700;
+            margin-left: 15px;
+            margin-right: 15px;
+            white-space: nowrap;
+        }
+
+        .Martyrinformation-title > div:nth-child(3) {
+            width: 100%;
+        }
+
+        .Martyrinformation-title > div:nth-child(3) > hr {
+            width: 100%;
+            line-height: 24px;
+        }
+
+        .Martyractivities {
+            padding-top: 60px;
+            float: left;
+            width: 270px;
+            height: 100%;
+        }
+
+        .details {
+            width: 100%;
+            padding-top: 40px;
+            padding-bottom: 50px;
+
+        }
+        .Martyrinformation:nth-child(2)>.details{
+            padding-bottom: 0px !important;
+        }
+        .details > div {
+            margin-left: 50px;
+        }
+
+        .details > div:nth-child(1) {
+            margin-bottom: 36px;
+        }
+
+        .information {
+            display: inline-block;
+            font-size: 14px;
+            min-width: 59.4px;
+            font-family: "microsoft yahei";
+            color: #444444;
+            vertical-align: top;
+        }
+
+        .describe {
+            display: inline-block;
+            width: 260px;
+            font-size: 14px;
+            font-family: "microsoft yahei";
+            color: #444444;
+            text-align: left;
+            font-weight: 700;
+            vertical-align: top;
+            word-break: break-all;
+
+        }
+
+        .Stories-martyrs {
+            padding-top: 8px !important;
+            font-weight: 700;
+        }
+
+        .Introduction-Longwen {
+            font-size: 14px;
+            font-family: "microsoft yahei";
+            color: #444444;
+            line-height: 2em
+        }
+
+        .Introduction-Longwen > p {
+            text-align: justify
+        }
+
+        .Photo-frame {
+        	position: relative;
+            width: 270px;
+            height: 335px;
+            margin-bottom: 40px;
+            text-align: center;
+            padding-top: 16px;
+            background-color: #dddddd;
+        }
+
+        .Photo {
+            width: 240px;
+            height: 310px;
+        }
+
+        .Sacrifice-button {
+            height: 400px;
+            width: 100%;
+        }
+
+        .Martyractivities > h3 {
+            text-align: center;
+            margin: 0;
+            padding-bottom: 50px;
+            font-size: 24px;
+            color: #444444;
+            letter-spacing: 6px;
+            font-weight: 600;
+        }
+
+        .Sacrifice-button > .Sacrifice-sweeping {
+            width: 108px;
+            height: 50px;
+            line-height: 50px;
+            background-image: url("../photohefei/人物/button.png");
+            background-size: 100% 100%;
+            margin-bottom: 30px;
+            margin-right: 0;
+            margin-left: 50px;
+            padding-left: 65px;
+            cursor: pointer
+        }
+
+        .Sacrifice-button > .Sacrifice-sweeping > span {
+            color: white;
+            font-size: 18px;
+        }
+
+        .Sacrifice-button > .Heroic-story {
+            cursor: pointer;
+            width: 173px;
+            height: 50px;
+            line-height: 50px;
+            color: white;
+            text-align: center;
+            border-radius: 4px;
+            margin-right: 0;
+            margin-left: 50px;
+            background-color: #8393c4;
+        }
+
+        /* .Sacrifice-button > .Heroic-story > span {
+
+        } */
+        .Photo-frame-name{
+        	letter-spacing:4px !important;
+        	width: 137px;
+		    font-weight: 900;
+		    text-indent: 2px;
+		    margin: 0 auto;
+		    position: absolute;
+		    top: 45px;
+		    left: 28px;
+		    font-size: 20px;
+		    /* width: 270px; */
+		    height: 30px;
+		    line-height: 30px;
+		    text-align: center;
+		    background: linear-gradient(to right,#f67633,#be000d);
+		    /* -webkit-background-clip: text; */
+		    color: transparent;
+}
+
+
+</style>
+</head>
+<body>
+ 
+  <div id="content">
+    <div class="Catalognamepicture">
+        <h3>英雄 徐步霄</h3>
+    </div>
+    <div class="MartyrCity clearfix">
+        <div class="Left-information">
+            <!--基本信息-->
+            <div class="Martyrinformation ">
+                <div class="Martyrinformation-title ">
+                    <div></div>
+                    <div>基本信息</div>
+                    <div>
+                        <hr/>
+                    </div>
+                </div>
+                <div class="essential-information details">
+                    <div>
+                        <span class="information">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别:</span>
+                        <span class="describe xb">男</span>
+                        <span class="information">出生日期:</span>
+                        <span class="describe csrq">1938年11月</span>
+                    </div>
+                    <div>
+                        <span class="information">籍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贯:</span>
+                        <span class="describe jg">安徽合肥</span>
+                        <span class="information">政治面貌:</span>
+                        <span class="describe zzmm">中国共产党党员</span>
+                    </div>
+                </div>
+            </div>
+            <!--生前情况-->
+            <div class="Martyrinformation">
+                <div class="Martyrinformation-title ">
+                    <div></div>
+                    <div>生前情况</div>
+                    <div>
+                        <hr/>
+                    </div>
+                </div>
+                <div class="Living-conditions details">
+                    <div>
+                        
+                        <span class="information">生前职务:</span>
+                        <span class="describe sqzw">我国原子弹研发人员</span>
+                        <span class="information">立功情况:</span>
+                        <span class="describe sqzw">增强我国国防实力</span>
+                        <span class="describe lgqk" style="width: 277px"></span>
+                    </div>
+                </div>
+            </div>
+            <!--牺牲情况-->
+            <div class="Martyrinformation">
+                <div class="Martyrinformation-title ">
+                    <div></div>
+                    <div>牺牲情况</div>
+                    <div>
+                        <hr/>
+                    </div>
+                </div>
+                <div class="Sacrifice details">
+                    <div>
+                        <span class="information">牺牲日期:</span>
+                        <span class="describe xsrq">不详</span>
+                        <span class="information">牺牲原因:</span>
+                        <span class="describe xsyy">不详</span>
+                    </div>
+                    <div>
+                        <span class="information">牺牲地点:</span>
+                        <span class="describe xxdd">不详</span>
+                        <span class="information">安葬地点:</span>
+                        <span class="describe azdd">不详</span>
+                    </div>
+                </div>
+            </div>
+            <!--烈士事迹-->
+            <div class="Martyrinformation">
+                <div class="Martyrinformation-title ">
+                    <div></div>
+                    <div>英雄事迹</div>
+                    <div>
+                        <hr/>
+                    </div>
+                </div>
+                <div class="Stories-martyrs details">
+                    <div class="Introduction-Longwen lssj">
+                        <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1958年从全国29个省市选拔出的各类精英。时年20岁的徐步霄原本在青海省饮食服务公司工作，当年12月，他被调入基地的商业局，从事财务工作，成为入驻金银滩“先头部队”的一员
+                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1958年7月，徐步霄所在的第一批次“先头部队”浩浩荡荡地奔赴青海省金银滩草原。<br>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当这个从未听过也未在地图上标识出来的高原牧区第一次赤裸裸地展示在面前时，徐步霄放眼半人高的草堆和漫天飞舞的风沙，一种“荒凉”和“深深的担忧”席卷而来。
+                            
+                            这个草原给他的印象并不好。其时，绝大多数和徐步霄一起进驻金银滩的人并不知道，他们所要做的，将是一声震惊世界的“中国巨响”。
+                            
+                            1964年10月16日，我国自行研制的第一颗原子弹成功爆炸。那一声巨响凝聚了无数国人的心血和汗水，巨响让世界记住了诸多英雄功勋，也使得与背后许许多多背后默默无闻的工作者倍感荣耀。也正是这些英雄筑起了的国家的国防高墙，奠定了华夏复兴，中国富强的基础。
+                        </p> <!-- 在这里添加文字 -->
+                    </div>
+                </div>
+            </div>
+      </div>
+       
+        <div class="Martyractivities">
+          <div class="Photo-frame lszp">
+              <img src="../photohefei/人物/徐步霄.jpeg" class="Photo" />
+              <!-- <div class="Photo-frame-name" id="lsname"></div> -->
+          </div>
+          <h3 class="lsxm">
+            英雄 徐步霄
+          </h3>
+          <div class="Sacrifice-button">
+              <div class="Sacrifice-sweeping">
+                  <span>祭扫英雄</span>
+              </div>
+             <!-- <div class="Heroic-story">
+                  <span>查看英雄故事</span>
+              </div>-->
+          </div>
+      </div>
+    </div>
+  </div>
+ 
+</body>
+</html>

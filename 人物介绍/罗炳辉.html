@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>罗炳辉</title>
+<style>
+  html{
+    min-width:1100px;
+    /* background-color: #be000d; */
+     }
+    #go-to-top{
+            cursor: pointer;
+      }
+    ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .clearfix:after { /*浼厓绱犳槸琛屽唴鍏冪礌 姝ｅ父娴忚鍣ㄦ竻闄ゆ诞鍔ㄦ柟娉 */
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        #content {
+            width: 1100px;
+            margin: 0 auto;
+            /* display: flex; */
+            transform: translateX(-30px);
+        }
+
+        .Catalognamepicture {
+            width: 342px;
+            height: 82px;
+            background-image: url("../photohefei/人物/one.png");
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding-left: 104px;
+            line-height: 82px;
+            background-size: 100% 100%;
+            /* margin-left: 100px; */
+        }
+
+        .Catalognamepicture > h3 {
+            font-weight: 200;
+            color: white;
+            letter-spacing: 4px
+        }
+
+        .MartyrCity {
+            width: 100%;
+            margin-bottom: 60px;
+            box-shadow: 1px 1px 6px -3px;
+            margin-left: 30px;
+        }
+
+        .Left-information {
+            float: left;
+            width: 720px;
+            padding-top: 60px;
+            padding-right: 60px;
+
+        }
+
+        .Martyrinformation {
+            width: 100%;
+            float: left;
+        }
+
+        .Martyrinformation-title {
+            width: 100%;
+            display: flex;
+            justify-content: left;
+        }
+
+        /* .Martyrinformation-title > div:nth-child(1) {
+            width: 6px;
+            height: 24px;
+            background-color: #4f9cee;
+        } */
+
+        .Martyrinformation-title > div:nth-child(2) {
+            font-size: 18px;
+            font-weight: 700;
+            margin-left: 15px;
+            margin-right: 15px;
+            white-space: nowrap;
+        }
+
+        .Martyrinformation-title > div:nth-child(3) {
+            width: 100%;
+        }
+
+        .Martyrinformation-title > div:nth-child(3) > hr {
+            width: 100%;
+            line-height: 24px;
+        }
+
+        .Martyractivities {
+            padding-top: 60px;
+            float: left;
+            width: 270px;
+            height: 100%;
+        }
+
+        .details {
+            width: 100%;
+            padding-top: 40px;
+            padding-bottom: 50px;
+
+        }
+        .Martyrinformation:nth-child(2)>.details{
+            padding-bottom: 0px !important;
+        }
+        .details > div {
+            margin-left: 50px;
+        }
+
+        .details > div:nth-child(1) {
+            margin-bottom: 36px;
+        }
+
+        .information {
+            display: inline-block;
+            font-size: 14px;
+            min-width: 59.4px;
+            font-family: "microsoft yahei";
+            color: #444444;
+            vertical-align: top;
+        }
+
+        .describe {
+            display: inline-block;
+            width: 260px;
+            font-size: 14px;
+            font-family: "microsoft yahei";
+            color: #444444;
+            text-align: left;
+            font-weight: 700;
+            vertical-align: top;
+            word-break: break-all;
+
+        }
+
+        .Stories-martyrs {
+            padding-top: 8px !important;
+            font-weight: 700;
+        }
+
+        .Introduction-Longwen {
+            font-size: 14px;
+            font-family: "microsoft yahei";
+            color: #444444;
+            line-height: 2em
+        }
+
+        .Introduction-Longwen > p {
+            text-align: justify
+        }
+
+        .Photo-frame {
+        	position: relative;
+            width: 270px;
+            height: 335px;
+            margin-bottom: 40px;
+            text-align: center;
+            padding-top: 16px;
+            background-color: #dddddd;
+        }
+
+        .Photo {
+            width: 240px;
+            height: 310px;
+        }
+
+        .Sacrifice-button {
+            height: 400px;
+            width: 100%;
+        }
+
+        .Martyractivities > h3 {
+            text-align: center;
+            margin: 0;
+            padding-bottom: 50px;
+            font-size: 24px;
+            color: #444444;
+            letter-spacing: 6px;
+            font-weight: 600;
+        }
+
+        .Sacrifice-button > .Sacrifice-sweeping {
+            width: 108px;
+            height: 50px;
+            line-height: 50px;
+            background-image: url("../photohefei/人物/button.png");
+            background-size: 100% 100%;
+            margin-bottom: 30px;
+            margin-right: 0;
+            margin-left: 50px;
+            padding-left: 65px;
+            cursor: pointer
+        }
+
+        .Sacrifice-button > .Sacrifice-sweeping > span {
+            color: white;
+            font-size: 18px;
+        }
+
+        .Sacrifice-button > .Heroic-story {
+            cursor: pointer;
+            width: 173px;
+            height: 50px;
+            line-height: 50px;
+            color: white;
+            text-align: center;
+            border-radius: 4px;
+            margin-right: 0;
+            margin-left: 50px;
+            background-color: #8393c4;
+        }
+
+        /* .Sacrifice-button > .Heroic-story > span {
+
+        } */
+        .Photo-frame-name{
+        	letter-spacing:4px !important;
+        	width: 137px;
+		    font-weight: 900;
+		    text-indent: 2px;
+		    margin: 0 auto;
+		    position: absolute;
+		    top: 45px;
+		    left: 28px;
+		    font-size: 20px;
+		    /* width: 270px; */
+		    height: 30px;
+		    line-height: 30px;
+		    text-align: center;
+		    background: linear-gradient(to right,#f67633,#be000d);
+		    /* -webkit-background-clip: text; */
+		    color: transparent;
+}
+
+
+</style>
+</head>
+<body>
+ 
+  <div id="content">
+    <div class="Catalognamepicture">
+        <h3>英雄 罗炳辉</h3>
+    </div>
+    <div class="MartyrCity clearfix">
+        <div class="Left-information">
+            <!--基本信息-->
+            <div class="Martyrinformation ">
+                <div class="Martyrinformation-title ">
+                    <div></div>
+                    <div>基本信息</div>
+                    <div>
+                        <hr/>
+                    </div>
+                </div>
+                <div class="essential-information details">
+                    <div>
+                        <span class="information">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别:</span>
+                        <span class="describe xb">男</span>
+                        <span class="information">出生日期:</span>
+                        <span class="describe csrq">1897年12月22日</span>
+                    </div>
+                    <div>
+                        <span class="information">籍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贯:</span>
+                        <span class="describe jg">汉族</span>
+                        <span class="information">政治面貌:</span>
+                        <span class="describe zzmm">中国共产党员</span>
+                    </div>
+                </div>
+            </div>
+            <!--生前情况-->
+            <div class="Martyrinformation">
+                <div class="Martyrinformation-title ">
+                    <div></div>
+                    <div>生前情况</div>
+                    <div>
+                        <hr/>
+                    </div>
+                </div>
+                <div class="Living-conditions details">
+                    <div>
+                        
+                        <span class="information">生前职务:</span>
+                        <span class="describe sqzw">中国工农红军的团长，旅长，第六军第二纵队队长，第十二军和第二军军长，任红九军团军团长，曾任中华苏维埃共和国中央执行委员，新四军第二副军长兼山东军区第二副司令员等职务</span>
+                        <span class="information">立功情况:</span>
+                        <span class="describe sqzw">1929年秋，罗炳辉响应中共号召，在吉安率六百多人发动武装起义，占领富田地区，反歼唐云山部队，巩固并扩大了赣西革命根据地。
+                            1941年，日伪军扫荡仪征，新四军江北副指挥兼第五支队司令员罗炳辉在仪征以北12 里按梅花桩式设伏。新四军以劣势装备毙伤日伪军500 多人，缴获了大批武器弹药。罗炳辉创造的“梅花桩”打法多次以少胜多，战绩卓著，为新四军提供了大量的装备支持。
+                            1946年，枣庄战役中，新四军第二纵队司令员罗炳辉率解放军歼灭国民党军队2.8万余人，受降国军4000余人，迟滞了国民党军北进，为主力部队向东北进军创造了时间，并挫败了国民党打通津浦路的计划。1946年，罗炳辉去世后，中共中央认定罗炳辉是“立功尤著”的红军高级将领和抗日名将。</span>
+                        <span class="describe lgqk" style="width: 277px"></span>
+                    </div>
+                </div>
+            </div>
+            <!--牺牲情况-->
+            <div class="Martyrinformation">
+                <div class="Martyrinformation-title ">
+                    <div></div>
+                    <div>牺牲情况</div>
+                    <div>
+                        <hr/>
+                    </div>
+                </div>
+                <div class="Sacrifice details">
+                    <div>
+                        <span class="information">牺牲日期:</span>
+                        <span class="describe xsrq">1946年6月21日</span>
+                        <span class="information">牺牲原因:</span>
+                        <span class="describe xsyy">脑溢血</span>
+                    </div>
+                    <div>
+                        <span class="information">牺牲地点:</span>
+                        <span class="describe xxdd">山东临沂</span>
+                        <span class="information">安葬地点:</span>
+                        <span class="describe azdd">临沂</span>
+                    </div>
+                </div>
+            </div>
+            <!--烈士事迹-->
+            <div class="Martyrinformation">
+                <div class="Martyrinformation-title ">
+                    <div></div>
+                    <div>英雄事迹</div>
+                    <div>
+                        <hr/>
+                    </div>
+                </div>
+                <div class="Stories-martyrs details">
+                    <div class="Introduction-Longwen lssj">
+                        <p>参军抗争
+                            民国2年，罗炳辉在见土霸谢介臣被陆军整治而敢怒不敢言后，萌生参军念头。他以惊人的毅力，用12天时间徒步数百公里到省会昆明寻求参军，因无关系，不得加入。其后在昆明先后做过木匠、伙夫、马夫，终在1915年一次偶然机会后在当时云南的唐继尧部当兵。由于他吃苦耐劳，不久就被提升为三等中士。1920年，罗炳辉当上了唐继尧的随行军士。
+                            怒弃二唐
+                            1921年，滇军顾品珍、叶荃反对唐继尧，率军逼近省城，并逼唐继尧下野。当时身为副官的罗炳辉被选为亲信，随同唐继尧与唐继虞赴香港。在见到二唐糜烂奢侈的生活后，罗炳辉认识到他们的奢侈豪华全是吃民血兵血，军阀救国救民之说全是骗人的。在多次向唐继尧请假不准后，留下一封书信，悄悄离开香港。
+                            参加北伐
+                            1922年，罗炳辉到桂林投奔了滇军，参加讨袁护国战争、东征战争和孙中山领导的北伐战争。当二次北伐攻占南昌时，陈炯明在广州叛变，北伐军回师讨伐陈，前线总指挥朱培德派罗炳辉等五人以“参军官”身份到粤军许崇智、李福林两军阵地考察，陈军趁湘军换防未遂实施反扑，北伐军兵败如山倒。罗炳辉怕滇军不知情被歼而日夜急行190里，把败况报告了朱培德便昏死过去。滇军迅速撤走湖南，避免了全军覆没的危险。1926年秋北伐中路军直趋南昌，罗炳辉受命率二营为先锋首攻牛行车站，战斗惨烈，夺下时，全营只剩下80多个人。此次战斗打开了主力部队进入南昌的重要门户。
+                            加入中共
+                            1927年3月，罗炳辉参加在南昌举行的被国民党杀害的赣州总工会领导人赞坚的追悼会上，听到了已成为中国共产党人的朱德的讲话。朱德对他讲，工农兵要联合起来，才能打倒军阀、土豪劣绅；只有革命成功了，大家才有工做，有田种，有饭吃，中国才有希望。罗炳辉大受启发，多次聆听朱德的讲课。
+                            罗炳辉像
+                            1929年4月，罗炳辉任江西吉安县靖卫大队大队长。中共中央派滇籍中共党员赵醒吾到吉安对他做教育争取工作。7月，罗炳辉秘密加入中国共产党。然后遵照党的指示，罗炳辉指挥以吉安为中心的赣西数县武装起义，随后被任命为中国工农红军江西独立第五团团长。之后，他同红军将士一道打下万安，歼灭前来围剿的国民党唐云山部，转战湘赣，对赣西革命根据地的巩固和扩大立了大功。
+                            1930年长汀会议后，罗炳辉被任命为红十二军的代理军长、军长，后又被任命为红九军团军团长。
+                            参加长征
+                            1934年，第五次反围剿失败，红军开始了二万五千里长征。罗炳辉率红九军团突出重围，抢渡湘江，在毛泽东的指挥下，进入西南地区。
+                            1935 年，罗炳辉率领红九军团渡过金沙江，从西昌进入凉山彝区，由此彻底摆脱了国民党军队的围追堵截，实现了北上抗日的战略意图。在彝区，罗炳辉执行党的民族政策，与彝族同胞交朋友，取得了彝族兄弟的信任，使得沿途有不少彝族同胞积极参加红军。在彝族同胞的带领下，罗炳辉率领的红九军团顺利通过凉山彝族地区，与中央红军主力在将台堡、会宁城会师。
+                            抗日战争
+                            抗日战争全面爆发后，罗炳辉告别延安，奔赴华中抗日前线。1938年，罗炳辉被任命为皖南新四军第一支队副司令员，与司令员陈毅并肩战斗，打击日军。
+                            1939年5月，随叶挺北渡长江。7月，任新四军第五支队司令员，江北指挥部副指挥。
+                            皖南事变后，为了打击日军对根据地的扫荡，罗炳辉根据多年游击战的经验，制定了伏击与运动游击为特色的包括伏击、纠缠、阻击、扰乱、歼灭等内容的“梅花桩战术”。
+                            由于多年艰苦的战斗，罗炳辉患上了严重的高血压病。当抗战胜利的消息传遍全中国的时候，罗炳辉因高血压而处于昏迷状态。当第二天神志清醒时，人们把这一喜讯告诉他，罗炳辉再一次振奋了。他坚决要求重返前线，参加受降工作。
+                            新中国成立后：新中国成立后，罗炳辉历任云南省军区司令员等职，为新中国的建设和国防事业做出了杰出贡献。
+                            总的来说，罗炳辉在革命斗争、抗战和新中国建设中，都展现出了杰出的领导才能和英雄气概，为中国革命事业和国防事业做出了不可磨灭的贡献。
+                            </p> <!-- 在这里添加文字 -->
+                    </div>
+                </div>
+            </div>
+      </div>
+       
+        <div class="Martyractivities">
+          <div class="Photo-frame lszp">
+              <img src="../photohefei/人物/罗炳辉.png" class="Photo" />
+              <!-- <div class="Photo-frame-name" id="lsname"></div> -->
+          </div>
+          <h3 class="lsxm">
+            英雄 罗炳辉
+          </h3>
+          <div class="Sacrifice-button">
+              <div class="Sacrifice-sweeping">
+                  <span>祭扫英雄</span>
+              </div>
+             <!-- <div class="Heroic-story">
+                  <span>查看英雄故事</span>
+              </div>-->
+          </div>
+      </div>
+    </div>
+  </div>
+ <style>
+    .Photo{
+        background-size: cover;
+    }
+ </style>
+</body>
+</html>

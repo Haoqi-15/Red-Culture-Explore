@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>周味韶</title>
+    <style>
+        html{
+            min-width:1100px;
+            /* background-color: #be000d; */
+        }
+        #go-to-top{
+            cursor: pointer;
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .clearfix:after { /*浼厓绱犳槸琛屽唴鍏冪礌 姝ｅ父娴忚鍣ㄦ竻闄ゆ诞鍔ㄦ柟娉 */
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        #content {
+            width: 1100px;
+            margin: 0 auto;
+            /* display: flex; */
+            transform: translateX(-30px);
+        }
+
+        .Catalognamepicture {
+            width: 342px;
+            height: 82px;
+            background-image: url("../photohefei/人物/one.png");
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding-left: 104px;
+            line-height: 82px;
+            background-size: 100% 100%;
+            /* margin-left: 100px; */
+        }
+
+        .Catalognamepicture > h3 {
+            font-weight: 200;
+            color: white;
+            letter-spacing: 4px
+        }
+
+        .MartyrCity {
+            width: 100%;
+            margin-bottom: 60px;
+            box-shadow: 1px 1px 6px -3px;
+            margin-left: 30px;
+        }
+
+        .Left-information {
+            float: left;
+            width: 720px;
+            padding-top: 60px;
+            padding-right: 60px;
+
+        }
+
+        .Martyrinformation {
+            width: 100%;
+            float: left;
+        }
+
+        .Martyrinformation-title {
+            width: 100%;
+            display: flex;
+            justify-content: left;
+        }
+
+        /* .Martyrinformation-title > div:nth-child(1) {
+            width: 6px;
+            height: 24px;
+            background-color: #4f9cee;
+        } */
+
+        .Martyrinformation-title > div:nth-child(2) {
+            font-size: 18px;
+            font-weight: 700;
+            margin-left: 15px;
+            margin-right: 15px;
+            white-space: nowrap;
+        }
+
+        .Martyrinformation-title > div:nth-child(3) {
+            width: 100%;
+        }
+
+        .Martyrinformation-title > div:nth-child(3) > hr {
+            width: 100%;
+            line-height: 24px;
+        }
+
+        .Martyractivities {
+            padding-top: 60px;
+            float: left;
+            width: 270px;
+            height: 100%;
+        }
+
+        .details {
+            width: 100%;
+            padding-top: 40px;
+            padding-bottom: 50px;
+
+        }
+        .Martyrinformation:nth-child(2)>.details{
+            padding-bottom: 0px !important;
+        }
+        .details > div {
+            margin-left: 50px;
+        }
+
+        .details > div:nth-child(1) {
+            margin-bottom: 36px;
+        }
+
+        .information {
+            display: inline-block;
+            font-size: 14px;
+            min-width: 59.4px;
+            font-family: "microsoft yahei";
+            color: #444444;
+            vertical-align: top;
+        }
+
+        .describe {
+            display: inline-block;
+            width: 260px;
+            font-size: 14px;
+            font-family: "microsoft yahei";
+            color: #444444;
+            text-align: left;
+            font-weight: 700;
+            vertical-align: top;
+            word-break: break-all;
+
+        }
+
+        .Stories-martyrs {
+            padding-top: 8px !important;
+            font-weight: 700;
+        }
+
+        .Introduction-Longwen {
+            font-size: 14px;
+            font-family: "microsoft yahei";
+            color: #444444;
+            line-height: 2em
+        }
+
+        .Introduction-Longwen > p {
+            text-align: justify
+        }
+
+        .Photo-frame {
+            position: relative;
+            width: 270px;
+            height: 335px;
+            margin-bottom: 40px;
+            text-align: center;
+            padding-top: 16px;
+            background-color: #dddddd;
+        }
+
+        .Photo {
+            width: 240px;
+            height: 310px;
+        }
+
+        .Sacrifice-button {
+            height: 400px;
+            width: 100%;
+        }
+
+        .Martyractivities > h3 {
+            text-align: center;
+            margin: 0;
+            padding-bottom: 50px;
+            font-size: 24px;
+            color: #444444;
+            letter-spacing: 6px;
+            font-weight: 600;
+        }
+
+        .Sacrifice-button > .Sacrifice-sweeping {
+            width: 108px;
+            height: 50px;
+            line-height: 50px;
+            background-image: url("../photohefei/人物/button.png");
+            background-size: 100% 100%;
+            margin-bottom: 30px;
+            margin-right: 0;
+            margin-left: 50px;
+            padding-left: 65px;
+            cursor: pointer
+        }
+
+        .Sacrifice-button > .Sacrifice-sweeping > span {
+            color: white;
+            font-size: 18px;
+        }
+
+        .Sacrifice-button > .Heroic-story {
+            cursor: pointer;
+            width: 173px;
+            height: 50px;
+            line-height: 50px;
+            color: white;
+            text-align: center;
+            border-radius: 4px;
+            margin-right: 0;
+            margin-left: 50px;
+            background-color: #8393c4;
+        }
+
+        /* .Sacrifice-button > .Heroic-story > span {
+
+        } */
+        .Photo-frame-name{
+            letter-spacing:4px !important;
+            width: 137px;
+            font-weight: 900;
+            text-indent: 2px;
+            margin: 0 auto;
+            position: absolute;
+            top: 45px;
+            left: 28px;
+            font-size: 20px;
+            /* width: 270px; */
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background: linear-gradient(to right,#f67633,#be000d);
+            /* -webkit-background-clip: text; */
+            color: transparent;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div id="content">
+    <div class="Catalognamepicture">
+        <h3>英雄 周味韶</h3>
+    </div>
+    <div class="MartyrCity clearfix">
+        <div class="Left-information">
+            <!--基本信息-->
+            <div class="Martyrinformation ">
+                <div class="Martyrinformation-title ">
+                    <div></div>
+                    <div>基本信息</div>
+                    <div>
+                        <hr/>
+                    </div>
+                </div>
+                <div class="essential-information details">
+                    <div>
+                        <span class="information">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别:</span>
+                        <span class="describe xb">男</span>
+                        <span class="information">出生日期:</span>
+                        <span class="describe csrq">1901年</span>
+                    </div>
+                    <div>
+                        <span class="information">籍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贯:</span>
+                        <span class="describe jg">安徽省肥西县</span>
+                        <span class="information">政治面貌:</span>
+                        <span class="describe zzmm">中共党员</span>
+                    </div>
+                </div>
+            </div>
+            <!--生前情况-->
+            <div class="Martyrinformation">
+                <div class="Martyrinformation-title ">
+                    <div></div>
+                    <div>生前情况</div>
+                    <div>
+                        <hr/>
+                    </div>
+                </div>
+                <div class="Living-conditions details">
+                    <div>
+
+                        <span class="information">生前职务:</span>
+                        <span class="describe sqzw">中共合肥县委宣传部干事</span>
+                        <span class="information">立功情况:</span>
+                        <span class="describe sqzw">成立农民协会，领导农民展声势浩大的抗捐抗税斗争</span>
+                        <span class="describe lgqk" style="width: 277px"></span>
+                    </div>
+                </div>
+            </div>
+            <!--牺牲情况-->
+            <div class="Martyrinformation">
+                <div class="Martyrinformation-title ">
+                    <div></div>
+                    <div>牺牲情况</div>
+                    <div>
+                        <hr/>
+                    </div>
+                </div>
+                <div class="Sacrifice details">
+                    <div>
+                        <span class="information">牺牲日期:</span>
+                        <span class="describe xsrq">1932年</span>
+                        <span class="information">牺牲原因:</span>
+                        <span class="describe xsyy">发动群众扒粮，途中遭遇国民党武装民团受到严刑拷问，不屈而死</span>
+                    </div>
+                    <div>
+                        <span class="information">牺牲地点:</span>
+                        <span class="describe xxdd">周老圩</span>
+                        <span class="information">安葬地点:</span>
+                        <span class="describe azdd">肥西县革命烈士陵园</span>
+                    </div>
+                </div>
+            </div>
+            <!--烈士事迹-->
+            <div class="Martyrinformation">
+                <div class="Martyrinformation-title ">
+                    <div></div>
+                    <div>英雄事迹</div>
+                    <div>
+                        <hr/>
+                    </div>
+                </div>
+                <div class="Stories-martyrs details">
+                    <div class="Introduction-Longwen lssj">
+                        <p>1927年12月，周味韶和徐梦观一起加入中国共产党。周味韶入党后，积极编写革命歌谣和“抗捐抗税”等标语口号，在乡村集镇散发，号召贫苦农民加入农民协会，1928年5月，3000多农民在雷麻店街北集会，成立农民协会，周味韶被选为农协会主席，他领导农民展声势浩大的抗捐抗税斗争，同年8月指挥农民到合尼城内向前来视察的蒋介石示威请感，迫使蒋批示将附加捐“退还二成三”。引起国民党政府注意。
+                            1929年秋，党让他转移肥东众兴巢地区，化名邹苇萧，在一所小学任教。到校后不久，即向进步教师宜传革命道理。先后介绍孙子模、罗邦道、何守盛等人入党，建立了党小组，随后发展为中共合肥东乡支部、特支，共有党员三四十人，1930年5月，中共合肥特区在西乡召开党员代表会议，成立县委，周味韶被任为中共合肥县委宣传部干事。党考虑他在合肥地区目标显著，于1930年秋令他转移汉口，在正丰煤矿公司经理尚晓峰家当家庭教师。此时，他一面教学一面从事工人运动。后因行动被反动当局发觉，他又离开汉口返回家乡，继续领导农民运动。
+                            1932年，合肥西乡大旱，人民生活无着，饿殍遍野，4月28日，中共合肥中心县委在西乡召开党团活动分子会议，决定发动群众开展“五一”扒粮斗争，由张志一、杜静明、周味韶三人组成指挥部负责指挥，周味韶的任务是带领群众扒周老圩地主高河沿仓房郢的粮食。4月30日，周味韶赶到雷麻，走村申户，发动群众，做好扒粮准备。5月1日清辰，男女老幼在枯草塘汇合，周味韶带领游击队和群众向地主粮仓高河沿进发，途中遭遇国民党武装民团，周味韶眼看众寡悬殊，不可力敌，即挺身而出，厉声说：“人是我召集的，要抓要杀由我顶着，不许你们伤害群众”。于是被抽走。周味韶被押到周老圩受到严刑拷问，不屈而死。</p> <!-- 在这里添加文字 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Martyractivities">
+            <div class="Photo-frame lszp">
+                <img src="../photohefei/人物/周味韶.jpeg" class="Photo" />
+                <!-- <div class="Photo-frame-name" id="lsname"></div> -->
+            </div>
+            <h3 class="lsxm">
+                英雄 周味韶
+            </h3>
+            <div class="Sacrifice-button">
+                <div class="Sacrifice-sweeping">
+                    <span>祭扫英雄</span>
+                </div>
+                <!-- <div class="Heroic-story">
+                     <span>查看英雄故事</span>
+                 </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

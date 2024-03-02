@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>杨兆成</title>
+  <style>
+    html {
+      min-width: 1100px;
+      /* background-color: #be000d; */
+    }
+
+    #go-to-top {
+      cursor: pointer;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .clearfix:after {
+      /*浼厓绱犳槸琛屽唴鍏冪礌 姝ｅ父娴忚鍣ㄦ竻闄ゆ诞鍔ㄦ柟娉 */
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+
+    #content {
+      width: 1100px;
+      margin: 0 auto;
+      /* display: flex; */
+      transform: translateX(-30px);
+    }
+
+    .Catalognamepicture {
+      width: 342px;
+      height: 82px;
+      background-image: url("../photohefei/人物/one.png");
+      margin-top: 30px;
+      margin-bottom: 30px;
+      padding-left: 104px;
+      line-height: 82px;
+      background-size: 100% 100%;
+      /* margin-left: 100px; */
+    }
+
+    .Catalognamepicture>h3 {
+      font-weight: 200;
+      color: white;
+      letter-spacing: 4px
+    }
+
+    .MartyrCity {
+      width: 100%;
+      margin-bottom: 60px;
+      box-shadow: 1px 1px 6px -3px;
+      margin-left: 30px;
+    }
+
+    .Left-information {
+      float: left;
+      width: 720px;
+      padding-top: 60px;
+      padding-right: 60px;
+
+    }
+
+    .Martyrinformation {
+      width: 100%;
+      float: left;
+    }
+
+    .Martyrinformation-title {
+      width: 100%;
+      display: flex;
+      justify-content: left;
+    }
+
+    /* .Martyrinformation-title > div:nth-child(1) {
+            width: 6px;
+            height: 24px;
+            background-color: #4f9cee;
+        } */
+
+    .Martyrinformation-title>div:nth-child(2) {
+      font-size: 18px;
+      font-weight: 700;
+      margin-left: 15px;
+      margin-right: 15px;
+      white-space: nowrap;
+    }
+
+    .Martyrinformation-title>div:nth-child(3) {
+      width: 100%;
+    }
+
+    .Martyrinformation-title>div:nth-child(3)>hr {
+      width: 100%;
+      line-height: 24px;
+    }
+
+    .Martyractivities {
+      padding-top: 60px;
+      float: left;
+      width: 270px;
+      height: 100%;
+    }
+
+    .details {
+      width: 100%;
+      padding-top: 40px;
+      padding-bottom: 50px;
+
+    }
+
+    .Martyrinformation:nth-child(2)>.details {
+      padding-bottom: 0px !important;
+    }
+
+    .details>div {
+      margin-left: 50px;
+    }
+
+    .details>div:nth-child(1) {
+      margin-bottom: 36px;
+    }
+
+    .information {
+      display: inline-block;
+      font-size: 14px;
+      min-width: 59.4px;
+      font-family: "microsoft yahei";
+      color: #444444;
+      vertical-align: top;
+    }
+
+    .describe {
+      display: inline-block;
+      width: 260px;
+      font-size: 14px;
+      font-family: "microsoft yahei";
+      color: #444444;
+      text-align: left;
+      font-weight: 700;
+      vertical-align: top;
+      word-break: break-all;
+
+    }
+
+    .Stories-martyrs {
+      padding-top: 8px !important;
+      font-weight: 700;
+    }
+
+    .Introduction-Longwen {
+      font-size: 14px;
+      font-family: "microsoft yahei";
+      color: #444444;
+      line-height: 2em
+    }
+
+    .Introduction-Longwen>p {
+      text-align: justify
+    }
+
+    .Photo-frame {
+      position: relative;
+      width: 270px;
+      height: 335px;
+      margin-bottom: 40px;
+      text-align: center;
+      padding-top: 16px;
+      background-color: #dddddd;
+    }
+
+    .Photo {
+      width: 240px;
+      height: 310px;
+    }
+
+    .Sacrifice-button {
+      height: 400px;
+      width: 100%;
+    }
+
+    .Martyractivities>h3 {
+      text-align: center;
+      margin: 0;
+      padding-bottom: 50px;
+      font-size: 24px;
+      color: #444444;
+      letter-spacing: 6px;
+      font-weight: 600;
+    }
+
+    .Sacrifice-button>.Sacrifice-sweeping {
+      width: 108px;
+      height: 50px;
+      line-height: 50px;
+      background-image: url("../photohefei/人物/button.png");
+      background-size: 100% 100%;
+      margin-bottom: 30px;
+      margin-right: 0;
+      margin-left: 50px;
+      padding-left: 65px;
+      cursor: pointer
+    }
+
+    .Sacrifice-button>.Sacrifice-sweeping>span {
+      color: white;
+      font-size: 18px;
+    }
+
+    .Sacrifice-button>.Heroic-story {
+      cursor: pointer;
+      width: 173px;
+      height: 50px;
+      line-height: 50px;
+      color: white;
+      text-align: center;
+      border-radius: 4px;
+      margin-right: 0;
+      margin-left: 50px;
+      background-color: #8393c4;
+    }
+
+    /* .Sacrifice-button > .Heroic-story > span {
+
+        } */
+    .Photo-frame-name {
+      letter-spacing: 4px !important;
+      width: 137px;
+      font-weight: 900;
+      text-indent: 2px;
+      margin: 0 auto;
+      position: absolute;
+      top: 45px;
+      left: 28px;
+      font-size: 20px;
+      /* width: 270px; */
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      background: linear-gradient(to right, #f67633, #be000d);
+      /* -webkit-background-clip: text; */
+      color: transparent;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="content">
+    <div class="Catalognamepicture">
+      <h3>英雄 杨兆成</h3>
+    </div>
+    <div class="MartyrCity clearfix">
+      <div class="Left-information">
+        <!--基本信息-->
+        <div class="Martyrinformation ">
+          <div class="Martyrinformation-title ">
+            <div></div>
+            <div>基本信息</div>
+            <div>
+              <hr />
+            </div>
+          </div>
+          <div class="essential-information details">
+            <div>
+              <span class="information">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别:</span>
+              <span class="describe xb">男</span>
+              <span class="information">出生日期:</span>
+              <span class="describe csrq">1902年</span>
+            </div>
+            <div>
+              <span class="information">籍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贯:</span>
+              <span class="describe jg">安徽省怀宁县</span>
+              <span class="information">政治面貌:</span>
+              <span class="describe zzmm">中国共产党员</span>
+            </div>
+          </div>
+        </div>
+        <!--生前情况-->
+        <div class="Martyrinformation">
+          <div class="Martyrinformation-title ">
+            <div></div>
+            <div>生前情况</div>
+            <div>
+              <hr />
+            </div>
+          </div>
+          <div class="Living-conditions details">
+            <div>
+
+              <span class="information">生前职务:</span>
+              <span class="describe sqzw">
+                共青团安庆地方执行委员会书记、国民党安庆市第二区分部常务委员</span>
+              <span class="information">立功情况:</span>
+              <span class="describe sqzw">积极宣传革命工作、开展兵运工作
+              </span>
+              <span class="describe lgqk" style="width: 277px"></span>
+            </div>
+          </div>
+        </div>
+        <!--牺牲情况-->
+        <div class="Martyrinformation">
+          <div class="Martyrinformation-title ">
+            <div></div>
+            <div>牺牲情况</div>
+            <div>
+              <hr />
+            </div>
+          </div>
+          <div class="Sacrifice details">
+            <div>
+              <span class="information">牺牲日期:</span>
+              <span class="describe xsrq">1926年9月
+              </span>
+              <span class="information">牺牲原因:</span>
+              <span class="describe xsyy">被军阀陈调元杀害于蚌埠小南山</span>
+            </div>
+            <div>
+              <span class="information">牺牲地点:</span>
+              <span class="describe xxdd">蚌埠小南山</span>
+              <span class="information">安葬地点:</span>
+              <span class="describe azdd">安徽省怀宁县</span>
+            </div>
+          </div>
+        </div>
+        <!--烈士事迹-->
+        <div class="Martyrinformation">
+          <div class="Martyrinformation-title ">
+            <div></div>
+            <div>英雄事迹</div>
+            <div>
+              <hr />
+            </div>
+          </div>
+          <div class="Stories-martyrs details">
+            <div class="Introduction-Longwen lssj">
+              <p>
+                <b>杨兆成人物生平</b><br>
+                杨兆成，原名杨志涛，又名杨昭，1902年出生于安徽省怀宁县三桥乡东广村。他家境贫寒，自幼依靠杨氏公堂资助读书。1920年考人安徽省第一师范学校。
+                <br>
+                <b>杨兆成学生时期</b><br>
+                杨兆成勤奋好学，朴实谦逊，深得教师器重。随着马克思主义在中国的传播，各地出现了一批接受马克思主义的先进分子，他们积极宣传马克思主义，并创
+                办刊物介绍共产国际的状况。年轻的杨兆成课余时间经常阅读进步书刊，并与同学纵论国家大事，对帝国主义的侵略和军阀官僚的横征暴敛深为愤概，从此
+                热心追求真理，逐步倾向革命。在校期间，他先后参加了安庆“六二”学潮、澄清省三届议员选举、驱逐倪系省长李兆珍以及反对曹锟贿选总统、痛打“猪仔
+                议员”张伯衍、何雯等重大斗争。1925年，在追慎孙中山逝世大会上和声援五丰运动的示威游行中，他激昂概，带头高呼口号。
+                <br>
+                1924年，杨兆成加入中国共产党，成为学校第一个党小组的组长。1925年10月，任共青团安庆特支干事会书记，后任共青团安庆地方执行委员会书记。
+                <br>
+                1925年，五丰运动以后，全国革命形势迅速发展，安庆人民反帝反封建斗争也不断振起高潮。时任安庆地区党团负责人的杨兆成为了加紧进行革命宣传，便与
+                上海共产主义青年团取得联系，让他们将《向导》、《中国青年》、《新青年》和《上海学生》等党团刊物和社会科学书籍按时寄来。为了防备敌人察觉，上
+                海方面以“上海书店”的名义投寄；安庆方面则由杨兆成以“杨昭”的名义接收，再由他分送党、团员，或借给周围进步同学阅读。他还和同学一起，利用校内旧
+                房舍，收集鲁迅、郭沫若、孙中山的著作以及《共产党宣言》《社会进化史》（蔡和森著）等书籍和各种革命报刊，秘密办起“中山图书室”，供同学阅览。为
+                了更广泛地发动群众，他还创办了工人夜校，亲自担任教员，用陶行知编的《平民千字课》作教材，帮助工人提高文化水平和阶级觉悟。这些革命活动，一直
+                开展的相当顺利，并未引起敌人注意。
+                <br>
+                1926年夏，杨兆成从省第一师范毕业，被聘为该校附属小学教务主任。当时他是中共安庆党组织的负责人，并以个人身份加入了国民党，担任国民党安庆市第
+                二区分部常务委员。北伐战争开始，处在北洋军阀反动统治下的安徽党、团组织以各种方式积极配合北伐军的胜利进军。经过五四运动以后的一系列反帝、反
+                封建斗争，安庆的群众工作已有一定基础。这时，杨兆成着手进行兵运工作。他动员他的表兄到安徽军务督办陈调元部队当兵，相机在士兵中宣传革命，争取
+                他们在适当的时候反正投诚。
+                <br>
+                <b>杨兆成英勇就义</b><br>
+                1926年夏，正值北伐军取得节节胜利、安徽各地革命浪潮日益高涨之时，为迎接配合北伐军北上，根据党的指示，杨兆成开始着手兵运工作。他利用一个亲戚
+                在军阀陈调元部当兵的关系，写信并邮寄革命书刊到他这位亲戚的驻地蚌埠，宣传革命，进行策反。这时，移驻蚌埠的安徽军务督办、军阀陈调元已成惊弓之
+                鸟，预感到自己的统治即将分崩离析，遂令全省军警对“赤化分子”严加防范，并加强了对邮件的检查。不久，杨兆成的亲戚被军警捉拿，供出原委。8月25日
+                晚，杨兆成返回省立一师时，落人军警的魔掌，次日解往南京，旋即押至蚌埠。在狱中，杨兆成虽遭严刑拷打，甚至被强迫在烧红的砖上行走，但他始终坚贞
+                不屈，严守党的秘密，安庆地方党、团组织没有因为他的被捕受到损失。杨兆成被捕后，党组织虽经多方营救，但终未获成功。杨氏宗族也曾托人具保，对方
+                提出只要杨兆成写个悔过书即可释放，但杨兆成暂钉截铁地回答：“至死也不向敌人低头！”9月10日晚，陈调元妄图阻北伐军前进的步伐，在出兵前举起屠刀
+                杀害了杨兆成。杨兆成牺牲时年仅24岁。
+                <br>
+                <b>杨兆成历史评价</b><br>
+                1927年，中共安徽省临委发表文章纪念杨兆成，盛赞他为“青年工作的指导员”，并发出了“踏着兆成同志的血迹向前杀去”，“保障我们的胜利”的号召。杨兆成
+                的一生是短暂的一生，也是光辉的一生。他对革命的忠诚和对工作的热情，永远是后人学习的楷模。
+                <br>
+                <b>杨兆成后世纪念</b><br>
+                杨兆成被军阀杀害后，他的3个叔叔到蚌埠收敛户骨，让他在家乡的土地上安息。新中国成立后，为纪念杨兆成烈士，中共怀宁县委、县政府将烈士墓修茸一
+                新，立上了墓碑，上有生平简介，随后又多次对烈士墓进行修茸。90余年过去了，杨兆成烈士在怀宁出生时的故居早已不复存在，原址已是一片后人栽下的小树林。
+                <br>
+              </p> <!-- 在这里添加文字 -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="Martyractivities">
+        <div class="Photo-frame lszp">
+          <img src="../photohefei/人物/杨兆成.jpg" class="Photo" />
+          <!-- <div class="Photo-frame-name" id="lsname"></div> -->
+        </div>
+        <h3 class="lsxm">
+          英雄 杨兆成
+        </h3>
+        <div class="Sacrifice-button">
+          <div class="Sacrifice-sweeping">
+            <span>祭扫英雄</span>
+          </div>
+          <!-- <div class="Heroic-story">
+                  <span>查看英雄故事</span>
+              </div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
